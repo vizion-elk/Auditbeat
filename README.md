@@ -28,10 +28,10 @@ Install on your servers to audit the activities of users and processes on your s
 
 ### Windows:
 
-1) As administrator, enter the following command in Powershell or download the zip file [here](https://github.com/themarcusaurelius/Auditbeat/archive/master.zip).
+1) As administrator, enter the following command in Powershell or download the zip file [here](https://github.com/vizionelkhelp/Auditbeat/archive/master.zip).
 
 ```
-Start-BitsTransfer -Source 'https://github.com/themarcusaurelius/Auditbeat/archive/master.zip' -Destination 'C:\Users\Administrator\Downloads\Auditbeat.zip'
+Start-BitsTransfer -Source 'https://github.com/vizionelkhelp/Auditbeat/archive/master.zip' -Destination 'C:\Users\Administrator\Downloads\Auditbeat.zip'
 ```
 
 2) Unzip the package and extract the contents to the `C:/` drive.
