@@ -1,0 +1,177 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.dataset\": {\"type\": \"phrase\", \"query\": \"process\"}}}, \"meta\": {\"key\": \"event.dataset\", \"negate\": false, \"alias\": null, \"value\": \"process\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"process\"}, \"disabled\": false, \"type\": \"phrase\"}}]}"
+                },
+                "title": "Process Count [Auditbeat System] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"cardinality\", \"enabled\": true, \"params\": {\"customLabel\": \"Processes\", \"field\": \"process.entity_id\"}, \"schema\": \"metric\", \"id\": \"1\"}], \"params\": {\"addLegend\": false, \"metric\": {\"percentageMode\": false, \"style\": {\"bgFill\": \"#000\", \"fontSize\": 60, \"labelColor\": false, \"subText\": \"\", \"bgColor\": false}, \"labels\": {\"show\": true}, \"colorSchema\": \"Green to Red\", \"colorsRange\": [{\"from\": 0, \"to\": 10000}], \"useRanges\": false, \"invertColors\": false, \"metricColorMode\": \"None\"}, \"addTooltip\": true, \"type\": \"metric\"}, \"type\": \"metric\", \"title\": \"Process Count [Auditbeat System] ECS\"}"
+            },
+            "id": "bb0d1870-27f1-11e9-89af-fd12d59dac90-ecs",
+            "type": "visualization",
+            "updated_at": "2019-02-03T20:24:39.030Z",
+            "version": 1
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.dataset\": {\"type\": \"phrase\", \"query\": \"process\"}}}, \"meta\": {\"key\": \"event.dataset\", \"negate\": false, \"alias\": null, \"value\": \"process\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"process\"}, \"disabled\": false, \"type\": \"phrase\"}}, {\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.action\": {\"type\": \"phrase\", \"query\": \"process_started\"}}}, \"meta\": {\"key\": \"event.action\", \"negate\": false, \"alias\": null, \"value\": \"process_started\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"process_started\"}, \"disabled\": false, \"type\": \"phrase\"}}]}"
+                },
+                "title": "Process Starts [Auditbeat System] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {\"customLabel\": \"Started\"}, \"schema\": \"metric\", \"id\": \"1\"}], \"params\": {\"addLegend\": false, \"metric\": {\"percentageMode\": false, \"style\": {\"bgFill\": \"#000\", \"fontSize\": 60, \"labelColor\": false, \"subText\": \"\", \"bgColor\": false}, \"labels\": {\"show\": true}, \"colorSchema\": \"Green to Red\", \"colorsRange\": [{\"from\": 0, \"to\": 10000}], \"useRanges\": false, \"invertColors\": false, \"metricColorMode\": \"None\"}, \"addTooltip\": true, \"type\": \"metric\"}, \"type\": \"metric\", \"title\": \"Process Starts [Auditbeat System] ECS\"}"
+            },
+            "id": "0db90830-27fd-11e9-89af-fd12d59dac90-ecs",
+            "type": "visualization",
+            "updated_at": "2019-02-03T21:45:42.195Z",
+            "version": 1
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.action\": {\"type\": \"phrase\", \"query\": \"process_stopped\"}}}, \"meta\": {\"key\": \"event.action\", \"negate\": false, \"alias\": null, \"value\": \"process_stopped\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"process_stopped\"}, \"disabled\": false, \"type\": \"phrase\"}}, {\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.dataset\": {\"type\": \"phrase\", \"query\": \"process\"}}}, \"meta\": {\"key\": \"event.dataset\", \"negate\": false, \"alias\": null, \"value\": \"process\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"process\"}, \"disabled\": false, \"type\": \"phrase\"}}]}"
+                },
+                "title": "Process Stops [Auditbeat System] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {\"customLabel\": \"Stopped\"}, \"schema\": \"metric\", \"id\": \"1\"}], \"params\": {\"addLegend\": false, \"metric\": {\"percentageMode\": false, \"style\": {\"bgFill\": \"#000\", \"fontSize\": 60, \"labelColor\": false, \"subText\": \"\", \"bgColor\": false}, \"labels\": {\"show\": true}, \"colorSchema\": \"Green to Red\", \"colorsRange\": [{\"from\": 0, \"to\": 10000}], \"useRanges\": false, \"invertColors\": false, \"metricColorMode\": \"None\"}, \"addTooltip\": true, \"type\": \"metric\"}, \"type\": \"metric\", \"title\": \"Process Stops [Auditbeat System] ECS\"}"
+            },
+            "id": "b885dae0-27fd-11e9-89af-fd12d59dac90-ecs",
+            "type": "visualization",
+            "updated_at": "2019-02-03T21:50:28.750Z",
+            "version": 1
+        },
+        {
+            "attributes": {
+                "columns": [
+                    "host.hostname",
+                    "user.name",
+                    "event.action",
+                    "process.pid",
+                    "process.name"
+                ],
+                "description": "",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"highlightAll\": true, \"index\": \"auditbeat-*\", \"version\": true, \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.dataset\": {\"type\": \"phrase\", \"query\": \"process\"}}}, \"meta\": {\"key\": \"event.dataset\", \"negate\": false, \"alias\": null, \"value\": \"process\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"process\"}, \"disabled\": false, \"type\": \"phrase\"}}]}"
+                },
+                "sort": [
+                    "@timestamp",
+                    "desc"
+                ],
+                "title": "Process Events [Auditbeat System] ECS",
+                "version": 1
+            },
+            "id": "0f9611b0-2862-11e9-97cb-474beda9f119-ecs",
+            "type": "search",
+            "updated_at": "2019-02-04T09:48:44.490Z",
+            "version": 1
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.dataset\": {\"type\": \"phrase\", \"query\": \"process\"}}}, \"meta\": {\"key\": \"event.dataset\", \"negate\": false, \"alias\": null, \"value\": \"process\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"process\"}, \"disabled\": false, \"type\": \"phrase\"}}]}"
+                },
+                "title": "Process OS Distribution [Auditbeat System] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"cardinality\", \"enabled\": true, \"params\": {\"field\": \"host.id\"}, \"schema\": \"metric\", \"id\": \"1\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"missingBucketLabel\": \"Missing\", \"otherBucket\": false, \"customLabel\": \"OS\", \"missingBucket\": false, \"otherBucketLabel\": \"Other\", \"size\": 5, \"orderBy\": \"1\", \"order\": \"desc\", \"field\": \"host.os.name\"}, \"schema\": \"segment\", \"id\": \"2\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"missingBucketLabel\": \"Missing\", \"otherBucket\": false, \"field\": \"host.os.version\", \"missingBucket\": false, \"otherBucketLabel\": \"Other\", \"size\": 5, \"orderBy\": \"1\", \"order\": \"desc\"}, \"schema\": \"segment\", \"id\": \"3\"}], \"params\": {\"addLegend\": true, \"labels\": {\"last_level\": true, \"show\": false, \"truncate\": 100, \"values\": true}, \"legendPosition\": \"right\", \"addTooltip\": true, \"isDonut\": true, \"type\": \"pie\"}, \"type\": \"pie\", \"title\": \"Process OS Distribution [Auditbeat System] ECS\"}"
+            },
+            "id": "91708fd0-2862-11e9-97cb-474beda9f119-ecs",
+            "type": "visualization",
+            "updated_at": "2019-02-04T09:52:22.349Z",
+            "version": 1
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.dataset\": {\"type\": \"phrase\", \"query\": \"process\"}}}, \"meta\": {\"key\": \"event.dataset\", \"negate\": false, \"alias\": null, \"value\": \"process\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"process\"}, \"disabled\": false, \"type\": \"phrase\"}}]}"
+                },
+                "title": "Process Event Histogram [Auditbeat System] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {}, \"schema\": \"metric\", \"id\": \"1\"}, {\"type\": \"date_histogram\", \"enabled\": true, \"params\": {\"useNormalizedEsInterval\": true, \"interval\": \"auto\", \"time_zone\": \"Europe/London\", \"field\": \"@timestamp\", \"drop_partials\": false, \"customInterval\": \"2h\", \"extended_bounds\": {}, \"min_doc_count\": 1}, \"schema\": \"segment\", \"id\": \"2\"}], \"params\": {\"addLegend\": true, \"addTimeMarker\": false, \"legendPosition\": \"right\", \"addTooltip\": true, \"valueAxes\": [{\"id\": \"ValueAxis-1\", \"style\": {}, \"labels\": {\"show\": true, \"rotate\": 0, \"truncate\": 100, \"filter\": false}, \"show\": true, \"position\": \"left\", \"title\": {\"text\": \"Count\"}, \"type\": \"value\", \"scale\": {\"mode\": \"normal\", \"type\": \"linear\"}, \"name\": \"LeftAxis-1\"}], \"times\": [], \"grid\": {\"categoryLines\": false, \"style\": {\"color\": \"#eee\"}}, \"categoryAxes\": [{\"id\": \"CategoryAxis-1\", \"style\": {}, \"labels\": {\"show\": true, \"truncate\": 100}, \"show\": true, \"position\": \"bottom\", \"type\": \"category\", \"scale\": {\"type\": \"linear\"}, \"title\": {}}], \"seriesParams\": [{\"show\": \"true\", \"drawLinesBetweenPoints\": true, \"valueAxis\": \"ValueAxis-1\", \"type\": \"histogram\", \"showCircles\": true, \"mode\": \"stacked\", \"data\": {\"id\": \"1\", \"label\": \"Count\"}}], \"type\": \"histogram\"}, \"type\": \"histogram\", \"title\": \"Process Event Histogram [Auditbeat System] ECS\"}"
+            },
+            "id": "b1e2af00-2862-11e9-97cb-474beda9f119-ecs",
+            "type": "visualization",
+            "updated_at": "2019-02-04T09:53:16.784Z",
+            "version": 1
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.dataset\": {\"type\": \"phrase\", \"query\": \"process\"}}}, \"meta\": {\"key\": \"event.dataset\", \"negate\": false, \"alias\": null, \"value\": \"process\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"process\"}, \"disabled\": false, \"type\": \"phrase\"}}]}"
+                },
+                "title": "Process Names [Auditbeat System] ECS",
+                "uiStateJSON": "{\"vis\": {\"params\": {\"sort\": {\"direction\": null, \"columnIndex\": null}}}}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"terms\", \"enabled\": true, \"params\": {\"missingBucketLabel\": \"Missing\", \"otherBucket\": false, \"customLabel\": \"Process\", \"missingBucket\": false, \"otherBucketLabel\": \"Other\", \"size\": 8, \"orderBy\": \"1\", \"order\": \"desc\", \"field\": \"process.name\"}, \"schema\": \"bucket\", \"id\": \"2\"}, {\"type\": \"count\", \"enabled\": true, \"params\": {}, \"schema\": \"metric\", \"id\": \"1\"}], \"params\": {\"totalFunc\": \"sum\", \"showMetricsAtAllLevels\": false, \"perPage\": 8, \"sort\": {\"direction\": null, \"columnIndex\": null}, \"showTotal\": false, \"showPartialRows\": false}, \"type\": \"table\", \"title\": \"Process Names [Auditbeat System] ECS\"}"
+            },
+            "id": "f1d365a0-2862-11e9-97cb-474beda9f119-ecs",
+            "type": "visualization",
+            "updated_at": "2019-02-04T09:56:33.249Z",
+            "version": 2
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.dataset\": {\"type\": \"phrase\", \"query\": \"process\"}}}, \"meta\": {\"key\": \"event.dataset\", \"negate\": false, \"alias\": null, \"value\": \"process\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"process\"}, \"disabled\": false, \"type\": \"phrase\"}}]}"
+                },
+                "title": "Process Users [Auditbeat System] ECS",
+                "uiStateJSON": "{\"vis\": {\"params\": {\"sort\": {\"direction\": null, \"columnIndex\": null}}}}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"terms\", \"enabled\": true, \"params\": {\"missingBucketLabel\": \"Missing\", \"otherBucket\": false, \"customLabel\": \"Process\", \"missingBucket\": false, \"otherBucketLabel\": \"Other\", \"size\": 8, \"orderBy\": \"1\", \"order\": \"desc\", \"field\": \"user.name\"}, \"schema\": \"bucket\", \"id\": \"2\"}, {\"type\": \"count\", \"enabled\": true, \"params\": {}, \"schema\": \"metric\", \"id\": \"1\"}], \"params\": {\"totalFunc\": \"sum\", \"showMetricsAtAllLevels\": false, \"perPage\": 8, \"sort\": {\"direction\": null, \"columnIndex\": null}, \"showTotal\": false, \"showPartialRows\": false}, \"type\": \"table\", \"title\": \"Process Users [Auditbeat System] ECS\"}"
+            },
+            "id": "30936470-2863-11e9-97cb-474beda9f119-ecs",
+            "type": "visualization",
+            "updated_at": "2019-02-04T09:56:49.335Z",
+            "version": 1
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": []}"
+                },
+                "title": "Dashboard Links [Auditbeat System] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [], \"params\": {\"fontSize\": 12, \"openLinksInNewTab\": false, \"markdown\": \"**Dashboards**: [System Overview](#/dashboard/2be46cb0-27f2-11e9-89af-fd12d59dac90-ecs) | [Hosts](#/dashboard/dfe62590-18da-11e9-9094-c50574723088-ecs) | [Logins](#/dashboard/2a17f200-285e-11e9-805f-43bf57dfa519-ecs) | [Users](#/dashboard/ae96a660-2864-11e9-97cb-474beda9f119-ecs) | [Processes](#/dashboard/4c68f110-2863-11e9-97cb-474beda9f119-ecs) | [Sockets](#/dashboard/957a3ef0-2867-11e9-9d21-0be348776e6c-ecs) | [Packages](#/dashboard/137c52f0-286a-11e9-9d21-0be348776e6c-ecs)\"}, \"type\": \"markdown\", \"title\": \"Dashboard Links [Auditbeat System] ECS\"}"
+            },
+            "id": "4ccc5b50-27f6-11e9-89af-fd12d59dac90-ecs",
+            "type": "visualization",
+            "updated_at": "2019-02-04T11:37:25.234Z",
+            "version": 3
+        },
+        {
+            "attributes": {
+                "description": "System Processes",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": []}"
+                },
+                "optionsJSON": "{\"hidePanelTitles\": false, \"darkTheme\": false, \"useMargins\": true}",
+                "panelsJSON": "[{\"id\": \"bb0d1870-27f1-11e9-89af-fd12d59dac90-ecs\", \"version\": \"7.0.0\", \"gridData\": {\"h\": 10, \"i\": \"1\", \"w\": 11, \"y\": 4, \"x\": 0}, \"embeddableConfig\": {}, \"type\": \"visualization\", \"panelIndex\": \"1\"}, {\"id\": \"0db90830-27fd-11e9-89af-fd12d59dac90-ecs\", \"version\": \"7.0.0\", \"gridData\": {\"h\": 10, \"i\": \"2\", \"w\": 11, \"y\": 4, \"x\": 11}, \"embeddableConfig\": {}, \"type\": \"visualization\", \"panelIndex\": \"2\"}, {\"id\": \"b885dae0-27fd-11e9-89af-fd12d59dac90-ecs\", \"version\": \"7.0.0\", \"gridData\": {\"h\": 10, \"i\": \"3\", \"w\": 11, \"y\": 4, \"x\": 22}, \"embeddableConfig\": {}, \"type\": \"visualization\", \"panelIndex\": \"3\"}, {\"id\": \"0f9611b0-2862-11e9-97cb-474beda9f119-ecs\", \"version\": \"7.0.0\", \"gridData\": {\"h\": 14, \"i\": \"4\", \"w\": 48, \"y\": 38, \"x\": 0}, \"embeddableConfig\": {}, \"type\": \"search\", \"panelIndex\": \"4\"}, {\"id\": \"91708fd0-2862-11e9-97cb-474beda9f119-ecs\", \"version\": \"7.0.0\", \"gridData\": {\"h\": 10, \"i\": \"5\", \"w\": 15, \"y\": 4, \"x\": 33}, \"embeddableConfig\": {}, \"type\": \"visualization\", \"panelIndex\": \"5\"}, {\"id\": \"b1e2af00-2862-11e9-97cb-474beda9f119-ecs\", \"version\": \"7.0.0\", \"gridData\": {\"h\": 9, \"i\": \"6\", \"w\": 48, \"y\": 29, \"x\": 0}, \"embeddableConfig\": {}, \"type\": \"visualization\", \"panelIndex\": \"6\"}, {\"id\": \"f1d365a0-2862-11e9-97cb-474beda9f119-ecs\", \"version\": \"7.0.0\", \"gridData\": {\"h\": 15, \"i\": \"7\", \"w\": 24, \"y\": 14, \"x\": 0}, \"embeddableConfig\": {}, \"type\": \"visualization\", \"panelIndex\": \"7\"}, {\"id\": \"30936470-2863-11e9-97cb-474beda9f119-ecs\", \"version\": \"7.0.0\", \"gridData\": {\"h\": 15, \"i\": \"8\", \"w\": 24, \"y\": 14, \"x\": 24}, \"embeddableConfig\": {}, \"type\": \"visualization\", \"panelIndex\": \"8\"}, {\"id\": \"4ccc5b50-27f6-11e9-89af-fd12d59dac90-ecs\", \"version\": \"7.0.0\", \"gridData\": {\"h\": 4, \"i\": \"9\", \"w\": 48, \"y\": 0, \"x\": 0}, \"embeddableConfig\": {}, \"type\": \"visualization\", \"panelIndex\": \"9\"}]",
+                "timeRestore": false,
+                "title": "[Auditbeat System] Process Dashboard ECS",
+                "version": 1
+            },
+            "id": "4c68f110-2863-11e9-97cb-474beda9f119-ecs",
+            "type": "dashboard",
+            "updated_at": "2019-02-04T10:13:58.155Z",
+            "version": 2
+        }
+    ],
+    "version": "7.0.0"
+}

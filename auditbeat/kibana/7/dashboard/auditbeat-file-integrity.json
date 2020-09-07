@@ -1,0 +1,233 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": []}"
+                },
+                "savedSearchId": "a380a060-cb44-11e7-9835-2f31fe08873b-ecs",
+                "title": "Actions [Auditbeat File Integrity] ECS",
+                "uiStateJSON": "{\"vis\": {\"defaultColors\": {\"0 - 100\": \"rgb(0,104,55)\"}}}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {\"customLabel\": \"\"}, \"schema\": \"metric\", \"id\": \"1\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"size\": 5, \"orderBy\": \"1\", \"order\": \"desc\", \"customLabel\": \"Action\", \"field\": \"event.action\"}, \"schema\": \"group\", \"id\": \"2\"}], \"params\": {\"addLegend\": false, \"addTooltip\": true, \"gauge\": {\"style\": {\"bgFill\": \"#000\", \"fontSize\": \"24\", \"labelColor\": false, \"subText\": \"\", \"bgColor\": false}, \"autoExtend\": false, \"colorSchema\": \"Green to Red\", \"extendRange\": false, \"backStyle\": \"Full\", \"invertColors\": false, \"gaugeStyle\": \"Full\", \"percentageMode\": false, \"useRange\": false, \"labels\": {\"color\": \"black\", \"show\": true}, \"gaugeColorMode\": \"None\", \"scale\": {\"color\": \"#333\", \"width\": 2, \"labels\": false, \"show\": true}, \"colorsRange\": [{\"from\": 0, \"to\": 100}], \"gaugeType\": \"Metric\", \"type\": \"simple\", \"verticalSplit\": true, \"orientation\": \"vertical\"}, \"type\": \"gauge\"}, \"type\": \"metric\", \"title\": \"Actions [Auditbeat File Integrity] ECS\"}"
+            },
+            "id": "AV0tVcg6g1PYniApZa-v-ecs",
+            "type": "visualization",
+            "updated_at": "2018-01-22T15:54:25.278Z",
+            "version": 6
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": []}"
+                },
+                "savedSearchId": "a380a060-cb44-11e7-9835-2f31fe08873b-ecs",
+                "title": "Events Over Time [Auditbeat File Integrity] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {}, \"schema\": \"metric\", \"id\": \"1\"}, {\"type\": \"date_histogram\", \"enabled\": true, \"params\": {\"customInterval\": \"2h\", \"extended_bounds\": {}, \"min_doc_count\": 1, \"field\": \"@timestamp\", \"interval\": \"auto\"}, \"schema\": \"segment\", \"id\": \"2\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"size\": 10, \"orderBy\": \"1\", \"order\": \"desc\", \"customLabel\": \"Action\", \"field\": \"event.action\"}, \"schema\": \"group\", \"id\": \"3\"}], \"params\": {\"addLegend\": true, \"addTimeMarker\": false, \"legendPosition\": \"left\", \"addTooltip\": true, \"valueAxes\": [{\"id\": \"ValueAxis-1\", \"style\": {}, \"labels\": {\"show\": true, \"rotate\": 0, \"truncate\": 100, \"filter\": false}, \"show\": true, \"position\": \"left\", \"title\": {\"text\": \"Count\"}, \"type\": \"value\", \"scale\": {\"type\": \"linear\", \"defaultYExtents\": true, \"mode\": \"normal\"}, \"name\": \"LeftAxis-1\"}], \"times\": [], \"grid\": {\"categoryLines\": false, \"style\": {\"color\": \"#eee\"}}, \"categoryAxes\": [{\"id\": \"CategoryAxis-1\", \"style\": {}, \"labels\": {\"show\": true, \"truncate\": 100}, \"show\": true, \"position\": \"bottom\", \"type\": \"category\", \"scale\": {\"type\": \"linear\"}, \"title\": {\"text\": \"@timestamp per 5 minutes\"}}], \"seriesParams\": [{\"show\": \"true\", \"drawLinesBetweenPoints\": true, \"valueAxis\": \"ValueAxis-1\", \"type\": \"histogram\", \"showCircles\": true, \"mode\": \"stacked\", \"data\": {\"id\": \"1\", \"label\": \"Count\"}}], \"type\": \"histogram\"}, \"type\": \"histogram\", \"title\": \"Events Over Time [Auditbeat File Integrity] ECS\"}"
+            },
+            "id": "AV0tV05vg1PYniApZbA2-ecs",
+            "type": "visualization",
+            "updated_at": "2018-01-22T15:54:25.278Z",
+            "version": 6
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": []}"
+                },
+                "savedSearchId": "a380a060-cb44-11e7-9835-2f31fe08873b-ecs",
+                "title": "Top owners [Auditbeat File Integrity] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {}, \"schema\": \"metric\", \"id\": \"1\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"size\": 5, \"orderBy\": \"1\", \"order\": \"desc\", \"customLabel\": \"Owner\", \"field\": \"file.owner\"}, \"schema\": \"segment\", \"id\": \"2\"}], \"params\": {\"addLegend\": true, \"legendPosition\": \"right\", \"addTooltip\": true, \"isDonut\": true, \"type\": \"pie\"}, \"type\": \"pie\", \"title\": \"Top owners [Auditbeat File Integrity] ECS\"}"
+            },
+            "id": "AV0tWL-Yg1PYniApZbCs-ecs",
+            "type": "visualization",
+            "updated_at": "2018-01-22T15:54:25.278Z",
+            "version": 6
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": []}"
+                },
+                "savedSearchId": "a380a060-cb44-11e7-9835-2f31fe08873b-ecs",
+                "title": "Top groups [Auditbeat File Integrity] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {}, \"schema\": \"metric\", \"id\": \"1\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"size\": 5, \"orderBy\": \"1\", \"order\": \"desc\", \"customLabel\": \"Group\", \"field\": \"file.group\"}, \"schema\": \"segment\", \"id\": \"2\"}], \"params\": {\"addLegend\": true, \"legendPosition\": \"right\", \"addTooltip\": true, \"isDonut\": true, \"type\": \"pie\"}, \"type\": \"pie\", \"title\": \"Top groups [Auditbeat File Integrity] ECS\"}"
+            },
+            "id": "AV0tWSdXg1PYniApZbDU-ecs",
+            "type": "visualization",
+            "updated_at": "2018-01-22T15:54:25.278Z",
+            "version": 6
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"event.action:updated OR event.action:attributes_modified\"}, \"filter\": []}"
+                },
+                "savedSearchId": "a380a060-cb44-11e7-9835-2f31fe08873b-ecs",
+                "title": "Top updated [Auditbeat File Integrity] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {}, \"schema\": \"metric\", \"id\": \"1\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"size\": 10, \"orderBy\": \"1\", \"order\": \"desc\", \"customLabel\": \"Path\", \"field\": \"file.path\"}, \"schema\": \"segment\", \"id\": \"3\"}], \"params\": {\"addLegend\": true, \"legendPosition\": \"right\", \"addTooltip\": true, \"isDonut\": false, \"type\": \"pie\"}, \"type\": \"pie\", \"title\": \"Top updated [Auditbeat File Integrity] ECS\"}"
+            },
+            "id": "AV0tW0djg1PYniApZbGL-ecs",
+            "type": "visualization",
+            "updated_at": "2018-01-22T15:54:25.278Z",
+            "version": 6
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"lucene\", \"query\": \"file.mode:/0..[2367]/ NOT file.type:symlink\"}, \"filter\": []}"
+                },
+                "savedSearchId": "a380a060-cb44-11e7-9835-2f31fe08873b-ecs",
+                "title": "World Writable File Count [Auditbeat File Integrity] ECS",
+                "uiStateJSON": "{\"vis\": {\"defaultColors\": {\"0 - 100\": \"rgb(0,104,55)\"}}}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"cardinality\", \"enabled\": true, \"params\": {\"customLabel\": \"World Writable Files\", \"field\": \"file.inode\"}, \"schema\": \"metric\", \"id\": \"1\"}], \"params\": {\"addLegend\": false, \"metric\": {\"percentageMode\": false, \"style\": {\"bgFill\": \"#000\", \"fontSize\": \"23\", \"labelColor\": false, \"subText\": \"\", \"bgColor\": false}, \"labels\": {\"color\": \"black\", \"show\": false}, \"colorSchema\": \"Green to Red\", \"useRange\": false, \"colorsRange\": [{\"from\": 0, \"to\": 100}], \"invertColors\": false, \"metricColorMode\": \"None\"}, \"addTooltip\": true, \"type\": \"metric\"}, \"type\": \"metric\", \"title\": \"World Writable File Count [Auditbeat File Integrity] ECS\"}"
+            },
+            "id": "AV0tY6jwg1PYniApZbRY-ecs",
+            "type": "visualization",
+            "updated_at": "2018-01-22T17:48:29.232Z",
+            "version": 7
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"file.type\": {\"type\": \"phrase\", \"query\": \"file\"}}}, \"meta\": {\"key\": \"file.type\", \"negate\": false, \"alias\": null, \"value\": \"file\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"file\"}, \"disabled\": false, \"type\": \"phrase\"}}]}"
+                },
+                "savedSearchId": "a380a060-cb44-11e7-9835-2f31fe08873b-ecs",
+                "title": "Most changed file by count [Auditbeat File Integrity] ECS",
+                "uiStateJSON": "{\"vis\": {\"defaultColors\": {\"0 - 100\": \"rgb(0,104,55)\"}}}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {\"customLabel\": \"Most changed file by count\"}, \"schema\": \"metric\", \"id\": \"1\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"size\": 1, \"orderBy\": \"1\", \"order\": \"desc\", \"customLabel\": \"File\", \"field\": \"file.path\"}, \"schema\": \"group\", \"id\": \"2\"}], \"params\": {\"addLegend\": false, \"addTooltip\": true, \"gauge\": {\"style\": {\"bgFill\": \"#000\", \"fontSize\": \"20\", \"labelColor\": false, \"subText\": \"\", \"bgColor\": false}, \"autoExtend\": false, \"colorSchema\": \"Green to Red\", \"backStyle\": \"Full\", \"invertColors\": false, \"gaugeStyle\": \"Full\", \"percentageMode\": false, \"useRange\": false, \"labels\": {\"color\": \"black\", \"show\": true}, \"gaugeColorMode\": \"None\", \"scale\": {\"color\": \"#333\", \"width\": 2, \"labels\": false, \"show\": false}, \"colorsRange\": [{\"from\": 0, \"to\": 100}], \"gaugeType\": \"Metric\", \"type\": \"simple\", \"verticalSplit\": false, \"orientation\": \"vertical\"}, \"type\": \"gauge\"}, \"type\": \"metric\", \"title\": \"Most changed file by count [Auditbeat File Integrity] ECS\"}"
+            },
+            "id": "AV0tav8Ag1PYniApZbbK-ecs",
+            "type": "visualization",
+            "updated_at": "2018-01-22T15:54:25.278Z",
+            "version": 6
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": []}"
+                },
+                "savedSearchId": "a380a060-cb44-11e7-9835-2f31fe08873b-ecs",
+                "title": "Most common mode by count [Auditbeat File Integrity] ECS",
+                "uiStateJSON": "{\"vis\": {\"defaultColors\": {\"0 - 100\": \"rgb(0,104,55)\"}}}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {\"customLabel\": \"Most common mode by count\"}, \"schema\": \"metric\", \"id\": \"1\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"size\": 1, \"orderBy\": \"1\", \"order\": \"desc\", \"customLabel\": \"Mode\", \"field\": \"file.mode\"}, \"schema\": \"group\", \"id\": \"2\"}], \"params\": {\"addLegend\": false, \"addTooltip\": true, \"gauge\": {\"style\": {\"bgFill\": \"#000\", \"fontSize\": \"20\", \"labelColor\": false, \"subText\": \"\", \"bgColor\": false}, \"autoExtend\": false, \"colorSchema\": \"Green to Red\", \"backStyle\": \"Full\", \"invertColors\": false, \"gaugeStyle\": \"Full\", \"percentageMode\": false, \"useRange\": false, \"labels\": {\"color\": \"black\", \"show\": true}, \"gaugeColorMode\": \"None\", \"scale\": {\"color\": \"#333\", \"width\": 2, \"labels\": false, \"show\": false}, \"colorsRange\": [{\"from\": 0, \"to\": 100}], \"gaugeType\": \"Metric\", \"type\": \"simple\", \"verticalSplit\": false, \"orientation\": \"vertical\"}, \"type\": \"gauge\"}, \"type\": \"metric\", \"title\": \"Most common mode by count [Auditbeat File Integrity] ECS\"}"
+            },
+            "id": "AV0tbcUdg1PYniApZbe1-ecs",
+            "type": "visualization",
+            "updated_at": "2018-01-22T15:54:25.278Z",
+            "version": 6
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": []}"
+                },
+                "savedSearchId": "a380a060-cb44-11e7-9835-2f31fe08873b-ecs",
+                "title": "File Event Summary By Host [Auditbeat File Integrity] ECS",
+                "uiStateJSON": "{\"vis\": {\"params\": {\"sort\": {\"direction\": null, \"columnIndex\": null}}}}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {\"customLabel\": \"Total Events\"}, \"schema\": \"metric\", \"id\": \"1\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"size\": 50, \"orderBy\": \"1\", \"order\": \"desc\", \"customLabel\": \"Host\", \"field\": \"host.name\"}, \"schema\": \"bucket\", \"id\": \"2\"}, {\"type\": \"top_hits\", \"enabled\": true, \"params\": {\"sortOrder\": \"desc\", \"sortField\": \"@timestamp\", \"customLabel\": \"Last Report\", \"aggregate\": \"concat\", \"size\": 1, \"field\": \"@timestamp\"}, \"schema\": \"metric\", \"id\": \"5\"}], \"params\": {\"totalFunc\": \"sum\", \"perPage\": 10, \"sort\": {\"direction\": null, \"columnIndex\": null}, \"showTotal\": true, \"showMeticsAtAllLevels\": false, \"showPartialRows\": false}, \"type\": \"table\", \"title\": \"File Event Summary By Host [Auditbeat File Integrity] ECS\"}"
+            },
+            "id": "AV0tc_xZg1PYniApZbnL-ecs",
+            "type": "visualization",
+            "updated_at": "2018-01-22T15:54:25.278Z",
+            "version": 6
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"event.action:deleted\"}, \"filter\": []}"
+                },
+                "savedSearchId": "a380a060-cb44-11e7-9835-2f31fe08873b-ecs",
+                "title": "Top deleted [Auditbeat File Integrity] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {}, \"schema\": \"metric\", \"id\": \"1\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"size\": 10, \"orderBy\": \"1\", \"order\": \"desc\", \"customLabel\": \"Path\", \"field\": \"file.path\"}, \"schema\": \"segment\", \"id\": \"2\"}], \"params\": {\"addLegend\": true, \"legendPosition\": \"right\", \"addTooltip\": true, \"isDonut\": false, \"type\": \"pie\"}, \"type\": \"pie\", \"title\": \"Top deleted [Auditbeat File Integrity] ECS\"}"
+            },
+            "id": "AV0tes4Eg1PYniApZbwV-ecs",
+            "type": "visualization",
+            "updated_at": "2018-01-22T15:54:25.278Z",
+            "version": 6
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"event.action:created\"}, \"filter\": []}"
+                },
+                "savedSearchId": "a380a060-cb44-11e7-9835-2f31fe08873b-ecs",
+                "title": "Top created [Auditbeat File Integrity] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {}, \"schema\": \"metric\", \"id\": \"1\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"size\": 10, \"orderBy\": \"1\", \"order\": \"desc\", \"customLabel\": \"Path\", \"field\": \"file.path\"}, \"schema\": \"segment\", \"id\": \"2\"}], \"params\": {\"addLegend\": true, \"legendPosition\": \"right\", \"addTooltip\": true, \"isDonut\": false, \"type\": \"pie\"}, \"type\": \"pie\", \"title\": \"Top created [Auditbeat File Integrity] ECS\"}"
+            },
+            "id": "AV0te0TCg1PYniApZbw9-ecs",
+            "type": "visualization",
+            "updated_at": "2018-01-22T15:54:25.278Z",
+            "version": 6
+        },
+        {
+            "attributes": {
+                "columns": [
+                    "file.path",
+                    "event.action"
+                ],
+                "description": "",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"highlightAll\": true, \"index\": \"auditbeat-*\", \"version\": true, \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.module\": {\"type\": \"phrase\", \"query\": \"file_integrity\"}}}, \"meta\": {\"key\": \"event.module\", \"negate\": false, \"alias\": null, \"value\": \"file_integrity\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"file_integrity\"}, \"disabled\": false, \"type\": \"phrase\"}}]}"
+                },
+                "sort": [
+                    "@timestamp",
+                    "desc"
+                ],
+                "title": "File Integrity Events [Auditbeat File Integrity] ECS",
+                "version": 1
+            },
+            "id": "a380a060-cb44-11e7-9835-2f31fe08873b-ecs",
+            "type": "search",
+            "updated_at": "2018-01-22T15:54:25.278Z",
+            "version": 6
+        },
+        {
+            "attributes": {
+                "description": "Monitor file integrity events.",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"highlightAll\": true, \"version\": true, \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": []}"
+                },
+                "optionsJSON": "{\"darkTheme\": false, \"useMargins\": false}",
+                "panelsJSON": "[{\"gridData\": {\"h\": 6, \"i\": \"1\", \"w\": 2, \"y\": 0, \"x\": 0}, \"id\": \"AV0tVcg6g1PYniApZa-v-ecs\", \"version\": \"6.2.4\", \"type\": \"visualization\", \"panelIndex\": \"1\"}, {\"gridData\": {\"h\": 6, \"i\": \"2\", \"w\": 7, \"y\": 0, \"x\": 2}, \"id\": \"AV0tV05vg1PYniApZbA2-ecs\", \"version\": \"6.2.4\", \"type\": \"visualization\", \"panelIndex\": \"2\"}, {\"gridData\": {\"h\": 3, \"i\": \"3\", \"w\": 3, \"y\": 0, \"x\": 9}, \"id\": \"AV0tWL-Yg1PYniApZbCs-ecs\", \"version\": \"6.2.4\", \"type\": \"visualization\", \"panelIndex\": \"3\"}, {\"gridData\": {\"h\": 3, \"i\": \"4\", \"w\": 3, \"y\": 3, \"x\": 9}, \"id\": \"AV0tWSdXg1PYniApZbDU-ecs\", \"version\": \"6.2.4\", \"type\": \"visualization\", \"panelIndex\": \"4\"}, {\"gridData\": {\"h\": 3, \"i\": \"5\", \"w\": 4, \"y\": 8, \"x\": 4}, \"id\": \"AV0tW0djg1PYniApZbGL-ecs\", \"version\": \"6.2.4\", \"type\": \"visualization\", \"panelIndex\": \"5\"}, {\"gridData\": {\"h\": 2, \"i\": \"6\", \"w\": 4, \"y\": 6, \"x\": 0}, \"id\": \"AV0tY6jwg1PYniApZbRY-ecs\", \"version\": \"6.2.4\", \"type\": \"visualization\", \"panelIndex\": \"6\"}, {\"gridData\": {\"h\": 2, \"i\": \"7\", \"w\": 4, \"y\": 6, \"x\": 4}, \"id\": \"AV0tav8Ag1PYniApZbbK-ecs\", \"version\": \"6.2.4\", \"type\": \"visualization\", \"panelIndex\": \"7\"}, {\"gridData\": {\"h\": 2, \"i\": \"8\", \"w\": 4, \"y\": 6, \"x\": 8}, \"id\": \"AV0tbcUdg1PYniApZbe1-ecs\", \"version\": \"6.2.4\", \"type\": \"visualization\", \"panelIndex\": \"8\"}, {\"gridData\": {\"h\": 5, \"i\": \"9\", \"w\": 6, \"y\": 11, \"x\": 0}, \"id\": \"AV0tc_xZg1PYniApZbnL-ecs\", \"version\": \"6.2.4\", \"type\": \"visualization\", \"panelIndex\": \"9\"}, {\"gridData\": {\"h\": 3, \"i\": \"10\", \"w\": 4, \"y\": 8, \"x\": 8}, \"id\": \"AV0tes4Eg1PYniApZbwV-ecs\", \"version\": \"6.2.4\", \"type\": \"visualization\", \"panelIndex\": \"10\"}, {\"gridData\": {\"h\": 3, \"i\": \"11\", \"w\": 4, \"y\": 8, \"x\": 0}, \"id\": \"AV0te0TCg1PYniApZbw9-ecs\", \"version\": \"6.2.4\", \"type\": \"visualization\", \"panelIndex\": \"11\"}, {\"id\": \"a380a060-cb44-11e7-9835-2f31fe08873b-ecs\", \"columns\": [\"file.path\", \"event.action\"], \"sort\": [\"@timestamp\", \"desc\"], \"gridData\": {\"h\": 5, \"i\": \"12\", \"w\": 6, \"y\": 11, \"x\": 6}, \"version\": \"6.2.4\", \"type\": \"search\", \"panelIndex\": \"12\"}]",
+                "timeRestore": false,
+                "title": "[Auditbeat File Integrity] Overview ECS",
+                "version": 1
+            },
+            "id": "AV0tXkjYg1PYniApZbKP-ecs",
+            "type": "dashboard",
+            "updated_at": "2018-01-22T15:54:25.278Z",
+            "version": 6
+        }
+    ],
+    "version": "6.1.2"
+}

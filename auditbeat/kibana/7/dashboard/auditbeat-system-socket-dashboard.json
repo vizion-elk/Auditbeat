@@ -1,0 +1,208 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": []}"
+                },
+                "title": "Dashboard Links [Auditbeat System] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [], \"params\": {\"fontSize\": 12, \"openLinksInNewTab\": false, \"markdown\": \"**Dashboards**: [System Overview](#/dashboard/2be46cb0-27f2-11e9-89af-fd12d59dac90-ecs) | [Hosts](#/dashboard/dfe62590-18da-11e9-9094-c50574723088-ecs) | [Logins](#/dashboard/2a17f200-285e-11e9-805f-43bf57dfa519-ecs) | [Users](#/dashboard/ae96a660-2864-11e9-97cb-474beda9f119-ecs) | [Processes](#/dashboard/4c68f110-2863-11e9-97cb-474beda9f119-ecs) | [Sockets](#/dashboard/957a3ef0-2867-11e9-9d21-0be348776e6c-ecs) | [Packages](#/dashboard/137c52f0-286a-11e9-9d21-0be348776e6c-ecs)\"}, \"type\": \"markdown\", \"title\": \"Dashboard Links [Auditbeat System] ECS\"}"
+            },
+            "id": "4ccc5b50-27f6-11e9-89af-fd12d59dac90-ecs",
+            "type": "visualization",
+            "updated_at": "2019-02-04T11:37:25.234Z",
+            "version": 3
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.dataset\": {\"type\": \"phrase\", \"query\": \"socket\"}}}, \"meta\": {\"key\": \"event.dataset\", \"negate\": false, \"alias\": null, \"value\": \"socket\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"socket\"}, \"disabled\": false, \"type\": \"phrase\"}}]}"
+                },
+                "title": "Socket Count [Auditbeat System] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"cardinality\", \"enabled\": true, \"params\": {\"customLabel\": \"Sockets\", \"field\": \"socket.entity_id\"}, \"schema\": \"metric\", \"id\": \"1\"}], \"params\": {\"addLegend\": false, \"metric\": {\"percentageMode\": false, \"style\": {\"bgFill\": \"#000\", \"fontSize\": 60, \"labelColor\": false, \"subText\": \"\", \"bgColor\": false}, \"labels\": {\"show\": true}, \"colorSchema\": \"Green to Red\", \"colorsRange\": [{\"from\": 0, \"to\": 10000}], \"useRanges\": false, \"invertColors\": false, \"metricColorMode\": \"None\"}, \"addTooltip\": true, \"type\": \"metric\"}, \"type\": \"metric\", \"title\": \"Socket Count [Auditbeat System] ECS\"}"
+            },
+            "id": "7323dd90-27f2-11e9-89af-fd12d59dac90-ecs",
+            "type": "visualization",
+            "updated_at": "2019-02-03T20:29:47.881Z",
+            "version": 1
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.dataset\": {\"type\": \"phrase\", \"query\": \"socket\"}}}, \"meta\": {\"key\": \"event.dataset\", \"negate\": false, \"alias\": null, \"value\": \"socket\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"socket\"}, \"disabled\": false, \"type\": \"phrase\"}}, {\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.action\": {\"type\": \"phrase\", \"query\": \"socket_opened\"}}}, \"meta\": {\"key\": \"event.action\", \"negate\": false, \"alias\": null, \"value\": \"socket_opened\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"socket_opened\"}, \"disabled\": false, \"type\": \"phrase\"}}]}"
+                },
+                "title": "Sockets Opened [Auditbeat System] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {\"customLabel\": \"Opened\"}, \"schema\": \"metric\", \"id\": \"1\"}], \"params\": {\"addLegend\": false, \"metric\": {\"percentageMode\": false, \"style\": {\"bgFill\": \"#000\", \"fontSize\": 60, \"labelColor\": false, \"subText\": \"\", \"bgColor\": false}, \"labels\": {\"show\": true}, \"colorSchema\": \"Green to Red\", \"colorsRange\": [{\"from\": 0, \"to\": 10000}], \"useRanges\": false, \"invertColors\": false, \"metricColorMode\": \"None\"}, \"addTooltip\": true, \"type\": \"metric\"}, \"type\": \"metric\", \"title\": \"Sockets Opened [Auditbeat System] ECS\"}"
+            },
+            "id": "295905e0-27fd-11e9-89af-fd12d59dac90-ecs",
+            "type": "visualization",
+            "updated_at": "2019-02-03T21:47:58.605Z",
+            "version": 2
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.dataset\": {\"type\": \"phrase\", \"query\": \"socket\"}}}, \"meta\": {\"key\": \"event.dataset\", \"negate\": false, \"alias\": null, \"value\": \"socket\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"socket\"}, \"disabled\": false, \"type\": \"phrase\"}}, {\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.action\": {\"type\": \"phrase\", \"query\": \"socket_closed\"}}}, \"meta\": {\"key\": \"event.action\", \"negate\": false, \"alias\": null, \"value\": \"socket_closed\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"socket_closed\"}, \"disabled\": false, \"type\": \"phrase\"}}]}"
+                },
+                "title": "Sockets Closed [Auditbeat System] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {\"customLabel\": \"Closed\"}, \"schema\": \"metric\", \"id\": \"1\"}], \"params\": {\"addLegend\": false, \"metric\": {\"percentageMode\": false, \"style\": {\"bgFill\": \"#000\", \"fontSize\": 60, \"labelColor\": false, \"subText\": \"\", \"bgColor\": false}, \"labels\": {\"show\": true}, \"colorSchema\": \"Green to Red\", \"colorsRange\": [{\"from\": 0, \"to\": 10000}], \"useRanges\": false, \"invertColors\": false, \"metricColorMode\": \"None\"}, \"addTooltip\": true, \"type\": \"metric\"}, \"type\": \"metric\", \"title\": \"Sockets Closed [Auditbeat System] ECS\"}"
+            },
+            "id": "82d46ec0-27fd-11e9-89af-fd12d59dac90-ecs",
+            "type": "visualization",
+            "updated_at": "2019-02-03T21:48:58.668Z",
+            "version": 1
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.dataset\": {\"type\": \"phrase\", \"query\": \"socket\"}}}, \"meta\": {\"key\": \"event.dataset\", \"negate\": false, \"alias\": null, \"value\": \"socket\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"socket\"}, \"disabled\": false, \"type\": \"phrase\"}}]}"
+                },
+                "title": "Socket Types [Auditbeat System] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {}, \"schema\": \"metric\", \"id\": \"1\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"missingBucketLabel\": \"Missing\", \"otherBucket\": false, \"field\": \"network.direction\", \"missingBucket\": false, \"otherBucketLabel\": \"Other\", \"size\": 5, \"orderBy\": \"1\", \"order\": \"desc\"}, \"schema\": \"segment\", \"id\": \"2\"}], \"params\": {\"addLegend\": true, \"labels\": {\"last_level\": true, \"show\": false, \"truncate\": 100, \"values\": true}, \"legendPosition\": \"right\", \"addTooltip\": true, \"isDonut\": true, \"type\": \"pie\"}, \"type\": \"pie\", \"title\": \"Socket Types [Auditbeat System] ECS\"}"
+            },
+            "id": "eb2dbfd0-2866-11e9-9d21-0be348776e6c-ecs",
+            "type": "visualization",
+            "updated_at": "2019-02-04T10:23:30.893Z",
+            "version": 1
+        },
+        {
+            "attributes": {
+                "columns": [
+                    "host.hostname",
+                    "network.direction",
+                    "process.name",
+                    "message"
+                ],
+                "description": "",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"highlightAll\": true, \"index\": \"auditbeat-*\", \"version\": true, \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.dataset\": {\"type\": \"phrase\", \"query\": \"socket\"}}}, \"meta\": {\"key\": \"event.dataset\", \"negate\": false, \"alias\": null, \"value\": \"socket\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"socket\"}, \"disabled\": false, \"type\": \"phrase\"}}]}"
+                },
+                "sort": [
+                    "@timestamp",
+                    "desc"
+                ],
+                "title": "Socket Documents [Auditbeat System] ECS",
+                "version": 1
+            },
+            "id": "3bfed610-2867-11e9-9d21-0be348776e6c-ecs",
+            "type": "search",
+            "updated_at": "2019-02-04T10:25:46.481Z",
+            "version": 1
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.dataset\": {\"type\": \"phrase\", \"query\": \"socket\"}}}, \"meta\": {\"key\": \"event.dataset\", \"negate\": false, \"alias\": null, \"value\": \"socket\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"socket\"}, \"disabled\": false, \"type\": \"phrase\"}}]}"
+                },
+                "title": "Socket Document Histogram [Auditbeat System] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {}, \"schema\": \"metric\", \"id\": \"1\"}, {\"type\": \"date_histogram\", \"enabled\": true, \"params\": {\"useNormalizedEsInterval\": true, \"interval\": \"auto\", \"time_zone\": \"Europe/London\", \"field\": \"@timestamp\", \"drop_partials\": false, \"customInterval\": \"2h\", \"extended_bounds\": {}, \"min_doc_count\": 1}, \"schema\": \"segment\", \"id\": \"2\"}], \"params\": {\"addLegend\": true, \"addTimeMarker\": false, \"legendPosition\": \"right\", \"addTooltip\": true, \"valueAxes\": [{\"id\": \"ValueAxis-1\", \"style\": {}, \"labels\": {\"show\": true, \"rotate\": 0, \"truncate\": 100, \"filter\": false}, \"show\": true, \"position\": \"left\", \"title\": {\"text\": \"Count\"}, \"type\": \"value\", \"scale\": {\"mode\": \"normal\", \"type\": \"linear\"}, \"name\": \"LeftAxis-1\"}], \"times\": [], \"grid\": {\"categoryLines\": false, \"style\": {\"color\": \"#eee\"}}, \"categoryAxes\": [{\"id\": \"CategoryAxis-1\", \"style\": {}, \"labels\": {\"show\": true, \"truncate\": 100}, \"show\": true, \"position\": \"bottom\", \"type\": \"category\", \"scale\": {\"type\": \"linear\"}, \"title\": {}}], \"seriesParams\": [{\"show\": \"true\", \"drawLinesBetweenPoints\": true, \"valueAxis\": \"ValueAxis-1\", \"type\": \"histogram\", \"showCircles\": true, \"mode\": \"stacked\", \"data\": {\"id\": \"1\", \"label\": \"Count\"}}], \"type\": \"histogram\"}, \"type\": \"histogram\", \"title\": \"Socket Document Histogram [Auditbeat System] ECS\"}"
+            },
+            "id": "536fa900-2867-11e9-9d21-0be348776e6c-ecs",
+            "type": "visualization",
+            "updated_at": "2019-02-04T10:26:25.808Z",
+            "version": 1
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.dataset\": {\"type\": \"phrase\", \"query\": \"socket\"}}}, \"meta\": {\"key\": \"event.dataset\", \"negate\": false, \"alias\": null, \"value\": \"socket\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"socket\"}, \"disabled\": false, \"type\": \"phrase\"}}]}"
+                },
+                "title": "Socket Users [Auditbeat System] ECS",
+                "uiStateJSON": "{\"vis\": {\"params\": {\"sort\": {\"direction\": null, \"columnIndex\": null}}}}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {}, \"schema\": \"metric\", \"id\": \"1\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"missingBucketLabel\": \"Missing\", \"otherBucket\": false, \"field\": \"user.name\", \"missingBucket\": false, \"otherBucketLabel\": \"Other\", \"size\": 8, \"orderBy\": \"1\", \"order\": \"desc\"}, \"schema\": \"bucket\", \"id\": \"2\"}], \"params\": {\"totalFunc\": \"sum\", \"showMetricsAtAllLevels\": false, \"perPage\": 8, \"sort\": {\"direction\": null, \"columnIndex\": null}, \"showTotal\": false, \"showPartialRows\": false}, \"type\": \"table\", \"title\": \"Socket Users [Auditbeat System] ECS\"}"
+            },
+            "id": "78391460-2867-11e9-9d21-0be348776e6c-ecs",
+            "type": "visualization",
+            "updated_at": "2019-02-04T10:27:27.526Z",
+            "version": 1
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.dataset\": {\"type\": \"phrase\", \"query\": \"socket\"}}}, \"meta\": {\"key\": \"event.dataset\", \"negate\": false, \"alias\": null, \"value\": \"socket\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"socket\"}, \"disabled\": false, \"type\": \"phrase\"}}]}"
+                },
+                "title": "Destination Ports [Auditbeat System] ECS",
+                "uiStateJSON": "{\"vis\": {\"params\": {\"sort\": {\"direction\": null, \"columnIndex\": null}}}}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {}, \"schema\": \"metric\", \"id\": \"1\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"missingBucketLabel\": \"Missing\", \"otherBucket\": false, \"field\": \"destination.port\", \"missingBucket\": false, \"otherBucketLabel\": \"Other\", \"size\": 30, \"orderBy\": \"1\", \"order\": \"desc\"}, \"schema\": \"bucket\", \"id\": \"2\"}], \"params\": {\"totalFunc\": \"sum\", \"showMetricsAtAllLevels\": false, \"perPage\": 10, \"sort\": {\"direction\": null, \"columnIndex\": null}, \"showTotal\": false, \"showPartialRows\": false}, \"type\": \"table\", \"title\": \"Destination Ports [Auditbeat System] ECS\"}"
+            },
+            "id": "1771daa0-286b-11e9-9d21-0be348776e6c-ecs",
+            "type": "visualization",
+            "updated_at": "2019-02-04T10:56:23.379Z",
+            "version": 3
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.dataset\": {\"type\": \"phrase\", \"query\": \"socket\"}}}, \"meta\": {\"key\": \"event.dataset\", \"negate\": false, \"alias\": null, \"value\": \"socket\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"socket\"}, \"disabled\": false, \"type\": \"phrase\"}}]}"
+                },
+                "title": "Socket Source IPs [Auditbeat System] ECS",
+                "uiStateJSON": "{\"vis\": {\"params\": {\"sort\": {\"direction\": null, \"columnIndex\": null}}}}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {}, \"schema\": \"metric\", \"id\": \"1\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"missingBucketLabel\": \"Missing\", \"otherBucket\": false, \"field\": \"source.ip\", \"missingBucket\": false, \"otherBucketLabel\": \"Other\", \"size\": 30, \"orderBy\": \"1\", \"order\": \"desc\"}, \"schema\": \"bucket\", \"id\": \"2\"}], \"params\": {\"totalFunc\": \"sum\", \"showMetricsAtAllLevels\": false, \"perPage\": 10, \"sort\": {\"direction\": null, \"columnIndex\": null}, \"showTotal\": false, \"showPartialRows\": false}, \"type\": \"table\", \"title\": \"Socket Source IPs [Auditbeat System] ECS\"}"
+            },
+            "id": "b899a700-286b-11e9-9d21-0be348776e6c-ecs",
+            "type": "visualization",
+            "updated_at": "2019-02-04T10:57:53.520Z",
+            "version": 1
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.dataset\": {\"type\": \"phrase\", \"query\": \"socket\"}}}, \"meta\": {\"key\": \"event.dataset\", \"negate\": false, \"alias\": null, \"value\": \"socket\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"socket\"}, \"disabled\": false, \"type\": \"phrase\"}}]}"
+                },
+                "title": "Socket Destination IPs [Auditbeat System] ECS",
+                "uiStateJSON": "{\"vis\": {\"params\": {\"sort\": {\"direction\": null, \"columnIndex\": null}}}}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {}, \"schema\": \"metric\", \"id\": \"1\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"missingBucketLabel\": \"Missing\", \"otherBucket\": false, \"field\": \"destination.ip\", \"missingBucket\": false, \"otherBucketLabel\": \"Other\", \"size\": 30, \"orderBy\": \"1\", \"order\": \"desc\"}, \"schema\": \"bucket\", \"id\": \"2\"}], \"params\": {\"totalFunc\": \"sum\", \"showMetricsAtAllLevels\": false, \"perPage\": 10, \"sort\": {\"direction\": null, \"columnIndex\": null}, \"showTotal\": false, \"showPartialRows\": false}, \"type\": \"table\", \"title\": \"Socket Destination IPs [Auditbeat System] ECS\"}"
+            },
+            "id": "d32c0540-286b-11e9-9d21-0be348776e6c-ecs",
+            "type": "visualization",
+            "updated_at": "2019-02-04T10:58:38.100Z",
+            "version": 1
+        },
+        {
+            "attributes": {
+                "description": "System Sockets",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": []}"
+                },
+                "optionsJSON": "{\"hidePanelTitles\": false, \"darkTheme\": false, \"useMargins\": true}",
+                "panelsJSON": "[{\"id\": \"4ccc5b50-27f6-11e9-89af-fd12d59dac90-ecs\", \"version\": \"7.0.0\", \"gridData\": {\"h\": 4, \"i\": \"1\", \"w\": 48, \"y\": 0, \"x\": 0}, \"embeddableConfig\": {}, \"type\": \"visualization\", \"panelIndex\": \"1\"}, {\"id\": \"7323dd90-27f2-11e9-89af-fd12d59dac90-ecs\", \"version\": \"7.0.0\", \"gridData\": {\"h\": 11, \"i\": \"2\", \"w\": 5, \"y\": 4, \"x\": 0}, \"embeddableConfig\": {}, \"type\": \"visualization\", \"panelIndex\": \"2\"}, {\"id\": \"295905e0-27fd-11e9-89af-fd12d59dac90-ecs\", \"version\": \"7.0.0\", \"gridData\": {\"h\": 11, \"i\": \"3\", \"w\": 5, \"y\": 4, \"x\": 5}, \"embeddableConfig\": {}, \"type\": \"visualization\", \"panelIndex\": \"3\"}, {\"id\": \"82d46ec0-27fd-11e9-89af-fd12d59dac90-ecs\", \"version\": \"7.0.0\", \"gridData\": {\"h\": 11, \"i\": \"4\", \"w\": 5, \"y\": 4, \"x\": 10}, \"embeddableConfig\": {}, \"type\": \"visualization\", \"panelIndex\": \"4\"}, {\"id\": \"eb2dbfd0-2866-11e9-9d21-0be348776e6c-ecs\", \"version\": \"7.0.0\", \"gridData\": {\"h\": 11, \"i\": \"5\", \"w\": 9, \"y\": 4, \"x\": 15}, \"embeddableConfig\": {}, \"type\": \"visualization\", \"panelIndex\": \"5\"}, {\"id\": \"3bfed610-2867-11e9-9d21-0be348776e6c-ecs\", \"version\": \"7.0.0\", \"gridData\": {\"h\": 26, \"i\": \"6\", \"w\": 48, \"y\": 23, \"x\": 0}, \"embeddableConfig\": {}, \"type\": \"search\", \"panelIndex\": \"6\"}, {\"id\": \"536fa900-2867-11e9-9d21-0be348776e6c-ecs\", \"version\": \"7.0.0\", \"gridData\": {\"h\": 8, \"i\": \"7\", \"w\": 48, \"y\": 15, \"x\": 0}, \"embeddableConfig\": {}, \"type\": \"visualization\", \"panelIndex\": \"7\"}, {\"id\": \"78391460-2867-11e9-9d21-0be348776e6c-ecs\", \"version\": \"7.0.0\", \"gridData\": {\"h\": 11, \"i\": \"8\", \"w\": 6, \"y\": 4, \"x\": 42}, \"embeddableConfig\": {}, \"type\": \"visualization\", \"panelIndex\": \"8\"}, {\"id\": \"1771daa0-286b-11e9-9d21-0be348776e6c-ecs\", \"version\": \"7.0.0\", \"gridData\": {\"h\": 11, \"i\": \"9\", \"w\": 6, \"y\": 4, \"x\": 36}, \"embeddableConfig\": {}, \"type\": \"visualization\", \"panelIndex\": \"9\"}, {\"id\": \"b899a700-286b-11e9-9d21-0be348776e6c-ecs\", \"version\": \"7.0.0\", \"gridData\": {\"h\": 11, \"i\": \"10\", \"w\": 6, \"y\": 4, \"x\": 24}, \"embeddableConfig\": {}, \"type\": \"visualization\", \"panelIndex\": \"10\"}, {\"id\": \"d32c0540-286b-11e9-9d21-0be348776e6c-ecs\", \"version\": \"7.0.0\", \"gridData\": {\"h\": 11, \"i\": \"11\", \"w\": 6, \"y\": 4, \"x\": 30}, \"embeddableConfig\": {}, \"type\": \"visualization\", \"panelIndex\": \"11\"}]",
+                "timeRestore": false,
+                "title": "[Auditbeat System] Socket Dashboard ECS",
+                "version": 1
+            },
+            "id": "957a3ef0-2867-11e9-9d21-0be348776e6c-ecs",
+            "type": "dashboard",
+            "updated_at": "2019-02-04T11:01:23.746Z",
+            "version": 3
+        }
+    ],
+    "version": "7.0.0"
+}

@@ -1,0 +1,188 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"auditd.summary.object.secondary\": {\"type\": \"phrase\", \"query\": \"0\"}}}, \"meta\": {\"key\": \"auditd.summary.object.secondary\", \"negate\": true, \"alias\": null, \"value\": \"0\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"0\"}, \"disabled\": false, \"apply\": true, \"type\": \"phrase\"}}]}"
+                },
+                "savedSearchId": "b4c93470-c240-11e7-8692-232bd1143e8a-ecs",
+                "title": "Bind (non-ephemeral) [Auditbeat Auditd] ECS",
+                "uiStateJSON": "{\"vis\": {\"params\": {\"sort\": {\"direction\": null, \"columnIndex\": null}}}}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {}, \"schema\": \"metric\", \"id\": \"1\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"size\": 50, \"orderBy\": \"_term\", \"order\": \"desc\", \"customLabel\": \"Exe\", \"field\": \"auditd.summary.how\"}, \"schema\": \"bucket\", \"id\": \"2\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"size\": 10, \"orderBy\": \"_term\", \"order\": \"desc\", \"customLabel\": \"Address\", \"field\": \"auditd.summary.object.primary\"}, \"schema\": \"bucket\", \"id\": \"3\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"size\": 10, \"orderBy\": \"_term\", \"order\": \"desc\", \"customLabel\": \"Port\", \"field\": \"auditd.summary.object.secondary\"}, \"schema\": \"bucket\", \"id\": \"4\"}], \"params\": {\"totalFunc\": \"sum\", \"perPage\": 10, \"sort\": {\"direction\": null, \"columnIndex\": null}, \"showTotal\": false, \"showMeticsAtAllLevels\": false, \"showPartialRows\": false}, \"type\": \"table\", \"title\": \"Bind (non-ephemeral) [Auditbeat Auditd] ECS\"}"
+            },
+            "id": "faf882f0-c242-11e7-8692-232bd1143e8a-ecs",
+            "type": "visualization",
+            "updated_at": "2018-01-16T22:08:02.522Z",
+            "version": 3
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": []}"
+                },
+                "savedSearchId": "5438b030-c246-11e7-8692-232bd1143e8a-ecs",
+                "title": "Connect [Auditbeat Auditd] ECS",
+                "uiStateJSON": "{\"vis\": {\"params\": {\"sort\": {\"direction\": null, \"columnIndex\": null}}}}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {}, \"schema\": \"metric\", \"id\": \"1\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"size\": 50, \"orderBy\": \"1\", \"order\": \"desc\", \"customLabel\": \"Exe\", \"field\": \"process.executable\"}, \"schema\": \"bucket\", \"id\": \"2\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"size\": 10, \"orderBy\": \"1\", \"order\": \"desc\", \"customLabel\": \"Address\", \"field\": \"auditd.summary.object.primary\"}, \"schema\": \"bucket\", \"id\": \"3\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"size\": 5, \"orderBy\": \"1\", \"order\": \"desc\", \"customLabel\": \"Port\", \"field\": \"auditd.summary.object.secondary\"}, \"schema\": \"bucket\", \"id\": \"4\"}], \"params\": {\"totalFunc\": \"sum\", \"perPage\": 10, \"sort\": {\"direction\": null, \"columnIndex\": null}, \"showTotal\": false, \"showMeticsAtAllLevels\": false, \"showPartialRows\": false}, \"type\": \"table\", \"title\": \"Connect [Auditbeat Auditd] ECS\"}"
+            },
+            "id": "ea483730-c246-11e7-8692-232bd1143e8a-ecs",
+            "type": "visualization",
+            "updated_at": "2018-01-16T23:24:16.851Z",
+            "version": 4
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": []}"
+                },
+                "savedSearchId": "e8734160-c24c-11e7-8692-232bd1143e8a-ecs",
+                "title": "Accept / Recvfrom Unique Address Table [Auditbeat Auditd] ECS",
+                "uiStateJSON": "{\"spy\": {\"mode\": {\"fill\": false, \"name\": null}}, \"vis\": {\"params\": {\"sort\": {\"direction\": null, \"columnIndex\": null}}}}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"cardinality\", \"enabled\": true, \"params\": {\"customLabel\": \"Unique Addresses\", \"field\": \"auditd.summary.object.primary\"}, \"schema\": \"metric\", \"id\": \"1\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"size\": 50, \"orderBy\": \"1\", \"order\": \"desc\", \"customLabel\": \"Exe\", \"field\": \"process.executable\"}, \"schema\": \"bucket\", \"id\": \"2\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"size\": 5, \"orderBy\": \"1\", \"order\": \"desc\", \"customLabel\": \"Syscall\", \"field\": \"auditd.data.syscall\"}, \"schema\": \"bucket\", \"id\": \"3\"}], \"params\": {\"totalFunc\": \"sum\", \"perPage\": 10, \"sort\": {\"direction\": null, \"columnIndex\": null}, \"showTotal\": false, \"showMeticsAtAllLevels\": false, \"showPartialRows\": false}, \"type\": \"table\", \"title\": \"Accept / Recvfrom Unique Address Table [Auditbeat Auditd] ECS\"}"
+            },
+            "id": "ceb91de0-c250-11e7-8692-232bd1143e8a-ecs",
+            "type": "visualization",
+            "updated_at": "2018-01-16T22:16:51.535Z",
+            "version": 5
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{}"
+                },
+                "title": "Socket Syscalls Time Series [Auditbeat Auditd] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [], \"params\": {\"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"time_field\": \"@timestamp\", \"index_pattern\": \"auditbeat-*\", \"background_color_rules\": [{\"id\": \"95b603d0-c252-11e7-8a68-93ffe9ec5950\"}], \"filter\": \"auditd.summary.object.type:socket\", \"bar_color_rules\": [{\"id\": \"2cebb0c0-c252-11e7-8a68-93ffe9ec5950\"}], \"type\": \"timeseries\", \"gauge_width\": 10, \"legend_position\": \"left\", \"show_legend\": 1, \"gauge_inner_width\": 10, \"series\": [{\"metrics\": [{\"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"type\": \"count\"}], \"chart_type\": \"line\", \"color\": \"#68BC00\", \"line_width\": 1, \"formatter\": \"number\", \"axis_position\": \"right\", \"split_mode\": \"terms\", \"stacked\": \"none\", \"fill\": 0.5, \"seperate_axis\": 0, \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"point_size\": 1, \"terms_field\": \"auditd.data.syscall\", \"label\": \"syscall\"}], \"axis_position\": \"left\", \"gauge_style\": \"half\", \"show_grid\": 1, \"axis_formatter\": \"number\", \"gauge_color_rules\": [{\"id\": \"6c891740-c252-11e7-8a68-93ffe9ec5950\"}], \"interval\": \"auto\"}, \"type\": \"metrics\", \"title\": \"Socket Syscalls Time Series [Auditbeat Auditd] ECS\"}"
+            },
+            "id": "b21e0c70-c252-11e7-8692-232bd1143e8a-ecs",
+            "type": "visualization",
+            "updated_at": "2018-01-16T22:13:38.857Z",
+            "version": 3
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": []}"
+                },
+                "title": "Socket Families [Auditbeat Auditd] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {}, \"schema\": \"metric\", \"id\": \"1\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"size\": 10, \"orderBy\": \"1\", \"order\": \"desc\", \"customLabel\": \"Socket Family\", \"field\": \"auditd.data.socket.family\"}, \"schema\": \"segment\", \"id\": \"2\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"size\": 10, \"orderBy\": \"1\", \"order\": \"desc\", \"customLabel\": \"Syscall\", \"field\": \"auditd.data.syscall\"}, \"schema\": \"segment\", \"id\": \"3\"}], \"params\": {\"addLegend\": true, \"legendPosition\": \"left\", \"addTooltip\": true, \"isDonut\": true, \"type\": \"pie\"}, \"type\": \"pie\", \"title\": \"Socket Families [Auditbeat Auditd] ECS\"}"
+            },
+            "id": "a8e20450-c256-11e7-8692-232bd1143e8a-ecs",
+            "type": "visualization",
+            "updated_at": "2018-01-16T22:12:51.655Z",
+            "version": 3
+        },
+        {
+            "attributes": {
+                "columns": [
+                    "agent.hostname",
+                    "auditd.summary.how",
+                    "auditd.summary.object.primary",
+                    "auditd.summary.object.secondary",
+                    "auditd.data.socket.family",
+                    "auditd.result"
+                ],
+                "description": "",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"highlightAll\": true, \"index\": \"auditbeat-*\", \"version\": true, \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.module\": {\"type\": \"phrase\", \"query\": \"auditd\"}}}, \"meta\": {\"key\": \"event.module\", \"negate\": false, \"alias\": null, \"value\": \"auditd\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"auditd\"}, \"disabled\": false, \"type\": \"phrase\"}}, {\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"auditd.data.syscall\": {\"type\": \"phrase\", \"query\": \"bind\"}}}, \"meta\": {\"key\": \"auditd.data.syscall\", \"negate\": false, \"alias\": null, \"value\": \"bind\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"bind\"}, \"disabled\": false, \"type\": \"phrase\"}}, {\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"auditd.data.socket.family\": {\"type\": \"phrase\", \"query\": \"netlink\"}}}, \"meta\": {\"key\": \"auditd.data.socket.family\", \"negate\": true, \"alias\": null, \"value\": \"netlink\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"netlink\"}, \"disabled\": false, \"type\": \"phrase\"}}]}"
+                },
+                "sort": [
+                    "@timestamp",
+                    "desc"
+                ],
+                "title": "Socket Binds [Auditbeat Auditd] ECS",
+                "version": 1
+            },
+            "id": "b4c93470-c240-11e7-8692-232bd1143e8a-ecs",
+            "type": "search",
+            "updated_at": "2018-01-16T23:05:58.935Z",
+            "version": 5
+        },
+        {
+            "attributes": {
+                "columns": [
+                    "agent.hostname",
+                    "auditd.summary.how",
+                    "auditd.summary.object.primary",
+                    "auditd.summary.object.secondary",
+                    "auditd.data.socket.family",
+                    "auditd.result",
+                    "auditd.data.exit"
+                ],
+                "description": "",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"highlightAll\": true, \"index\": \"auditbeat-*\", \"version\": true, \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.module\": {\"type\": \"phrase\", \"query\": \"auditd\"}}}, \"meta\": {\"key\": \"event.module\", \"negate\": false, \"alias\": null, \"value\": \"auditd\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"auditd\"}, \"disabled\": false, \"type\": \"phrase\"}}, {\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.action\": {\"type\": \"phrase\", \"query\": \"connected-to\"}}}, \"meta\": {\"key\": \"event.action\", \"negate\": false, \"alias\": null, \"value\": \"connected-to\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"connected-to\"}, \"disabled\": false, \"type\": \"phrase\"}}, {\"$state\": {\"store\": \"appState\"}, \"exists\": {\"field\": \"auditd.summary.object.primary\"}, \"meta\": {\"key\": \"auditd.summary.object.primary\", \"negate\": false, \"alias\": null, \"value\": \"exists\", \"index\": \"auditbeat-*\", \"disabled\": false, \"type\": \"exists\"}}]}"
+                },
+                "sort": [
+                    "@timestamp",
+                    "desc"
+                ],
+                "title": "Socket Connects [Auditbeat Auditd] ECS",
+                "version": 1
+            },
+            "id": "5438b030-c246-11e7-8692-232bd1143e8a-ecs",
+            "type": "search",
+            "updated_at": "2018-01-16T23:09:43.937Z",
+            "version": 5
+        },
+        {
+            "attributes": {
+                "columns": [
+                    "agent.hostname",
+                    "auditd.summary.how",
+                    "auditd.summary.object.primary",
+                    "auditd.summary.object.secondary",
+                    "auditd.data.socket.family",
+                    "event.action"
+                ],
+                "description": "",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"highlightAll\": true, \"index\": \"auditbeat-*\", \"version\": true, \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.module\": {\"type\": \"phrase\", \"query\": \"auditd\"}}}, \"meta\": {\"key\": \"event.module\", \"negate\": false, \"alias\": null, \"value\": \"auditd\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"auditd\"}, \"disabled\": false, \"type\": \"phrase\"}}, {\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"auditd.summary.object.type\": {\"type\": \"phrase\", \"query\": \"socket\"}}}, \"meta\": {\"key\": \"auditd.summary.object.type\", \"negate\": false, \"alias\": null, \"value\": \"socket\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"socket\"}, \"disabled\": false, \"type\": \"phrase\"}}, {\"$state\": {\"store\": \"appState\"}, \"exists\": {\"field\": \"auditd.summary.object.primary\"}, \"meta\": {\"key\": \"auditd.summary.object.primary\", \"negate\": false, \"alias\": null, \"value\": \"exists\", \"index\": \"auditbeat-*\", \"disabled\": false, \"type\": \"exists\"}}, {\"$state\": {\"store\": \"appState\"}, \"query\": {\"terms\": {\"auditd.data.syscall\": [\"accept\", \"accept4\", \"recvfrom\", \"recvmsg\"]}}, \"meta\": {\"key\": \"query\", \"negate\": false, \"alias\": null, \"value\": \"{\\\"terms\\\":{\\\"auditd.data.syscall\\\":[\\\"accept\\\",\\\"accept4\\\",\\\"recvfrom\\\",\\\"recvmsg\\\"]}}\", \"index\": \"auditbeat-*\", \"disabled\": false, \"type\": \"custom\"}}]}"
+                },
+                "sort": [
+                    "@timestamp",
+                    "desc"
+                ],
+                "title": "Socket Accept / Recvfrom [Auditbeat Auditd] ECS",
+                "version": 1
+            },
+            "id": "e8734160-c24c-11e7-8692-232bd1143e8a-ecs",
+            "type": "search",
+            "updated_at": "2018-01-16T23:20:51.403Z",
+            "version": 4
+        },
+        {
+            "attributes": {
+                "description": "Summary of socket related syscall events.",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"highlightAll\": true, \"version\": true, \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": []}"
+                },
+                "optionsJSON": "{\"darkTheme\": false, \"useMargins\": false}",
+                "panelsJSON": "[{\"id\": \"faf882f0-c242-11e7-8692-232bd1143e8a-ecs\", \"version\": \"6.2.4\", \"gridData\": {\"h\": 4, \"i\": \"1\", \"w\": 6, \"y\": 3, \"x\": 6}, \"embeddableConfig\": {\"vis\": {\"params\": {\"sort\": {\"direction\": null, \"columnIndex\": null}}}}, \"type\": \"visualization\", \"panelIndex\": \"1\"}, {\"id\": \"ea483730-c246-11e7-8692-232bd1143e8a-ecs\", \"version\": \"6.2.4\", \"gridData\": {\"h\": 5, \"i\": \"2\", \"w\": 6, \"y\": 7, \"x\": 0}, \"embeddableConfig\": {\"vis\": {\"params\": {\"sort\": {\"direction\": null, \"columnIndex\": null}}}}, \"type\": \"visualization\", \"panelIndex\": \"2\"}, {\"id\": \"ceb91de0-c250-11e7-8692-232bd1143e8a-ecs\", \"version\": \"6.2.4\", \"gridData\": {\"h\": 5, \"i\": \"3\", \"w\": 6, \"y\": 7, \"x\": 6}, \"embeddableConfig\": {\"vis\": {\"params\": {\"sort\": {\"direction\": null, \"columnIndex\": null}}}}, \"type\": \"visualization\", \"panelIndex\": \"3\"}, {\"gridData\": {\"h\": 3, \"i\": \"4\", \"w\": 12, \"y\": 0, \"x\": 0}, \"id\": \"b21e0c70-c252-11e7-8692-232bd1143e8a-ecs\", \"version\": \"6.2.4\", \"type\": \"visualization\", \"panelIndex\": \"4\"}, {\"gridData\": {\"h\": 4, \"i\": \"5\", \"w\": 6, \"y\": 3, \"x\": 0}, \"id\": \"a8e20450-c256-11e7-8692-232bd1143e8a-ecs\", \"version\": \"6.2.4\", \"type\": \"visualization\", \"panelIndex\": \"5\"}]",
+                "timeRestore": false,
+                "title": "[Auditbeat Auditd] Sockets ECS",
+                "version": 1
+            },
+            "id": "693a5f40-c243-11e7-8692-232bd1143e8a-ecs",
+            "type": "dashboard",
+            "updated_at": "2018-01-16T23:24:37.521Z",
+            "version": 4
+        }
+    ],
+    "version": "6.2.4"
+}
