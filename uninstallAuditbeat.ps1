@@ -8,7 +8,7 @@ if($principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) 
     Set-ExecutionPolicy Unrestricted
 
     #Change Directory to Auditbeat
-    Set-Location -Path 'c:\Auditbeat-master\auditbeat'
+    Set-Location -Path 'c:\Auditbeat-7.7.0\auditbeat'
 
     #Stops auditbeat from running
     Stop-Service -Force auditbeat
@@ -21,7 +21,7 @@ if($principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) 
 
     "`nUninstalling Auditbeat Now..."
 
-    $Target = "C:\Auditbeat-master"
+    $Target = "C:\Auditbeat-7.7.0"
 
     Get-ChildItem -Path $Target -Recurse -force |
         Where-Object { -not ($_.pscontainer)} |

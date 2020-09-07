@@ -1,12 +1,3 @@
-###################### Auditbeat Configuration Example #########################
-
-# This is an example configuration file highlighting only the most common
-# options. The auditbeat.reference.yml file from the same directory contains all
-# the supported options with more comments. You can use it as a reference.
-#
-# You can find the full configuration reference here:
-# https://www.elastic.co/guide/en/beats/auditbeat/index.html
-
 #==========================  Modules configuration =============================
 auditbeat.modules:
 
@@ -73,7 +64,10 @@ setup.kibana:
   # Scheme and port can be left out and will be set to the default (http and 5601)
   # In case you specify and additional path, the scheme is required: http://localhost:5601/path
   # IPv6 addresses should always be defined as: https://[2001:db8::1]:5601
-  #host: "localhost:5601"
+  host: ""
+  username: ""
+  password: ""
+  ssl.verification_mode: none
 
   # Kibana Space ID
   # ID of the Kibana Space into which the dashboards should be loaded. By default,
@@ -100,7 +94,7 @@ setup.kibana:
 #-------------------------- Elasticsearch output ------------------------------
 output.elasticsearch:
   # Array of hosts to connect to.
-  hosts: ["localhost:9200"]
+  hosts: ["elasticsearch-api-endpoint"]
 
   # Protocol - either `http` (default) or `https`.
   #protocol: "https"

@@ -7,7 +7,7 @@ $principal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.
 if($principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     "`nYou are running Powershell with full privilege`n"
 
-    Set-Location -Path 'c:\auditbeat-master\auditbeat'
+    Set-Location -Path 'c:\auditbeat-7.7.0\auditbeat'
     Set-ExecutionPolicy Unrestricted
     
     "Auditbeat Execution policy set - Success`n"
