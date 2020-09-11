@@ -57,7 +57,10 @@ setup.template.settings:
 # Starting with Beats version 6.0.0, the dashboards are loaded via the Kibana API.
 # This requires a Kibana endpoint configuration.
 setup.kibana:
-
+  host: ""
+  username: ""
+  password: ""
+  ssl.verification_mode: none
   # Kibana Host
   # Scheme and port can be left out and will be set to the default (http and 5601)
   # In case you specify and additional path, the scheme is required: http://localhost:5601/path
@@ -89,7 +92,8 @@ setup.kibana:
 #-------------------------- Elasticsearch output ------------------------------
 output.elasticsearch:
   # Array of hosts to connect to.
-  hosts: ["localhost:9200"]
+  hosts: ["elasticsearch-api-endpoint"]
+  ssl.verification_mode: none
 
   # Protocol - either `http` (default) or `https`.
   #protocol: "https"
@@ -160,3 +164,5 @@ processors:
 
 # This allows to enable 6.7 migration aliases
 #migration.6_to_7.enabled: true
+setup.ilm.enabled: false
+setup.ilm.check_exists: false
