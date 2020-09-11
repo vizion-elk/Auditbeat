@@ -4,13 +4,13 @@
             "attributes": {
                 "description": "Command executions",
                 "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": []}"
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
                 },
                 "savedSearchId": "d382f5b0-c1c6-11e7-8995-936807a28b16-ecs",
                 "title": "Error Codes [Auditbeat Auditd] ECS",
                 "uiStateJSON": "{}",
                 "version": 1,
-                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {}, \"schema\": \"metric\", \"id\": \"1\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"size\": 10, \"orderBy\": \"1\", \"order\": \"desc\", \"exclude\": \"0\", \"field\": \"auditd.data.exit\"}, \"schema\": \"segment\", \"id\": \"2\"}], \"params\": {\"addLegend\": true, \"legendPosition\": \"right\", \"addTooltip\": true, \"isDonut\": true, \"type\": \"pie\"}, \"type\": \"pie\", \"title\": \"Error Codes [Auditbeat Auditd] ECS\"}"
+                "visState": "{\"params\": {\"legendPosition\": \"right\", \"type\": \"pie\", \"addTooltip\": true, \"addLegend\": true, \"isDonut\": true}, \"title\": \"Error Codes [Auditbeat Auditd] ECS\", \"type\": \"pie\", \"aggs\": [{\"schema\": \"metric\", \"enabled\": true, \"type\": \"count\", \"id\": \"1\", \"params\": {}}, {\"schema\": \"segment\", \"enabled\": true, \"type\": \"terms\", \"id\": \"2\", \"params\": {\"field\": \"auditd.data.exit\", \"orderBy\": \"1\", \"order\": \"desc\", \"size\": 10, \"exclude\": \"0\"}}]}"
             },
             "id": "20a8e8d0-c1c8-11e7-8995-936807a28b16-ecs",
             "type": "visualization",
@@ -21,12 +21,12 @@
             "attributes": {
                 "description": "",
                 "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": []}"
+                    "searchSourceJSON": "{\"filter\": [], \"index\": \"auditbeat-*\", \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
                 },
                 "title": "Primary Username Tag Cloud [Auditbeat Auditd] ECS",
                 "uiStateJSON": "{}",
                 "version": 1,
-                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {}, \"schema\": \"metric\", \"id\": \"1\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"size\": 10, \"orderBy\": \"1\", \"order\": \"desc\", \"field\": \"auditd.summary.actor.primary\"}, \"schema\": \"segment\", \"id\": \"2\"}], \"params\": {\"minFontSize\": 18, \"orientation\": \"single\", \"scale\": \"linear\", \"maxFontSize\": 45}, \"type\": \"tagcloud\", \"title\": \"Primary Username Tag Cloud [Auditbeat Auditd] ECS\"}"
+                "visState": "{\"params\": {\"scale\": \"linear\", \"minFontSize\": 18, \"orientation\": \"single\", \"maxFontSize\": 45}, \"title\": \"Primary Username Tag Cloud [Auditbeat Auditd] ECS\", \"type\": \"tagcloud\", \"aggs\": [{\"schema\": \"metric\", \"enabled\": true, \"type\": \"count\", \"id\": \"1\", \"params\": {}}, {\"schema\": \"segment\", \"enabled\": true, \"type\": \"terms\", \"id\": \"2\", \"params\": {\"field\": \"auditd.summary.actor.primary\", \"orderBy\": \"1\", \"order\": \"desc\", \"size\": 10}}]}"
             },
             "id": "f81a6de0-c1c1-11e7-8995-936807a28b16-ecs",
             "type": "visualization",
@@ -37,13 +37,13 @@
             "attributes": {
                 "description": "",
                 "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": []}"
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
                 },
                 "savedSearchId": "d382f5b0-c1c6-11e7-8995-936807a28b16-ecs",
                 "title": "Exe Name Tag Cloud [Auditbeat Auditd] ECS",
                 "uiStateJSON": "{}",
                 "version": 1,
-                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {}, \"schema\": \"metric\", \"id\": \"1\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"size\": 10, \"orderBy\": \"1\", \"order\": \"desc\", \"field\": \"process.executable\"}, \"schema\": \"segment\", \"id\": \"2\"}], \"params\": {\"minFontSize\": 14, \"orientation\": \"single\", \"scale\": \"linear\", \"maxFontSize\": 45}, \"type\": \"tagcloud\", \"title\": \"Exe Name Tag Cloud [Auditbeat Auditd] ECS\"}"
+                "visState": "{\"params\": {\"scale\": \"linear\", \"minFontSize\": 14, \"orientation\": \"single\", \"maxFontSize\": 45}, \"title\": \"Exe Name Tag Cloud [Auditbeat Auditd] ECS\", \"type\": \"tagcloud\", \"aggs\": [{\"schema\": \"metric\", \"enabled\": true, \"type\": \"count\", \"id\": \"1\", \"params\": {}}, {\"schema\": \"segment\", \"enabled\": true, \"type\": \"terms\", \"id\": \"2\", \"params\": {\"field\": \"process.executable\", \"orderBy\": \"1\", \"order\": \"desc\", \"size\": 10}}]}"
             },
             "id": "2efac370-c1ca-11e7-8995-936807a28b16-ecs",
             "type": "visualization",
@@ -62,7 +62,7 @@
                 "description": "",
                 "hits": 0,
                 "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"highlightAll\": true, \"index\": \"auditbeat-*\", \"version\": true, \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.module\": {\"type\": \"phrase\", \"query\": \"auditd\"}}}, \"meta\": {\"key\": \"event.module\", \"negate\": false, \"alias\": null, \"value\": \"auditd\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"auditd\"}, \"disabled\": false, \"type\": \"phrase\"}}, {\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.action\": {\"type\": \"phrase\", \"query\": \"executed\"}}}, \"meta\": {\"key\": \"event.action\", \"negate\": false, \"alias\": null, \"value\": \"executed\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"executed\"}, \"disabled\": false, \"type\": \"phrase\"}}]}"
+                    "searchSourceJSON": "{\"highlightAll\": true, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"meta\": {\"disabled\": false, \"alias\": null, \"index\": \"auditbeat-*\", \"type\": \"phrase\", \"value\": \"auditd\", \"negate\": false, \"params\": {\"type\": \"phrase\", \"query\": \"auditd\"}, \"key\": \"event.module\"}, \"query\": {\"match\": {\"event.module\": {\"type\": \"phrase\", \"query\": \"auditd\"}}}}, {\"$state\": {\"store\": \"appState\"}, \"meta\": {\"disabled\": false, \"alias\": null, \"index\": \"auditbeat-*\", \"type\": \"phrase\", \"value\": \"executed\", \"negate\": false, \"params\": {\"type\": \"phrase\", \"query\": \"executed\"}, \"key\": \"event.action\"}, \"query\": {\"match\": {\"event.action\": {\"type\": \"phrase\", \"query\": \"executed\"}}}}], \"index\": \"auditbeat-*\", \"query\": {\"query\": \"\", \"language\": \"kuery\"}, \"version\": true}"
                 },
                 "sort": [
                     "@timestamp",
@@ -81,10 +81,10 @@
                 "description": "Overview of kernel executions",
                 "hits": 0,
                 "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"highlightAll\": true, \"version\": true, \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": []}"
+                    "searchSourceJSON": "{\"highlightAll\": true, \"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}, \"version\": true}"
                 },
-                "optionsJSON": "{\"darkTheme\": false, \"useMargins\": false}",
-                "panelsJSON": "[{\"gridData\": {\"h\": 3, \"i\": \"1\", \"w\": 4, \"y\": 0, \"x\": 4}, \"id\": \"20a8e8d0-c1c8-11e7-8995-936807a28b16-ecs\", \"version\": \"6.2.4\", \"type\": \"visualization\", \"panelIndex\": \"1\"}, {\"gridData\": {\"h\": 3, \"i\": \"3\", \"w\": 4, \"y\": 0, \"x\": 8}, \"id\": \"f81a6de0-c1c1-11e7-8995-936807a28b16-ecs\", \"version\": \"6.2.4\", \"type\": \"visualization\", \"panelIndex\": \"3\"}, {\"gridData\": {\"h\": 3, \"i\": \"5\", \"w\": 4, \"y\": 0, \"x\": 0}, \"id\": \"2efac370-c1ca-11e7-8995-936807a28b16-ecs\", \"version\": \"6.2.4\", \"type\": \"visualization\", \"panelIndex\": \"5\"}, {\"gridData\": {\"h\": 5, \"i\": \"6\", \"w\": 12, \"y\": 3, \"x\": 0}, \"id\": \"d382f5b0-c1c6-11e7-8995-936807a28b16-ecs\", \"version\": \"6.2.4\", \"type\": \"search\", \"panelIndex\": \"6\"}]",
+                "optionsJSON": "{\"useMargins\": false, \"darkTheme\": false}",
+                "panelsJSON": "[{\"gridData\": {\"x\": 4, \"i\": \"1\", \"w\": 4, \"h\": 3, \"y\": 0}, \"panelIndex\": \"1\", \"type\": \"visualization\", \"version\": \"6.2.4\", \"id\": \"20a8e8d0-c1c8-11e7-8995-936807a28b16-ecs\"}, {\"gridData\": {\"x\": 8, \"i\": \"3\", \"w\": 4, \"h\": 3, \"y\": 0}, \"panelIndex\": \"3\", \"type\": \"visualization\", \"version\": \"6.2.4\", \"id\": \"f81a6de0-c1c1-11e7-8995-936807a28b16-ecs\"}, {\"gridData\": {\"x\": 0, \"i\": \"5\", \"w\": 4, \"h\": 3, \"y\": 0}, \"panelIndex\": \"5\", \"type\": \"visualization\", \"version\": \"6.2.4\", \"id\": \"2efac370-c1ca-11e7-8995-936807a28b16-ecs\"}, {\"gridData\": {\"x\": 0, \"i\": \"6\", \"w\": 12, \"h\": 5, \"y\": 3}, \"panelIndex\": \"6\", \"type\": \"search\", \"version\": \"6.2.4\", \"id\": \"d382f5b0-c1c6-11e7-8995-936807a28b16-ecs\"}]",
                 "timeRestore": false,
                 "title": "[Auditbeat Auditd] Executions ECS",
                 "version": 1

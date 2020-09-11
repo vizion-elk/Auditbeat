@@ -9,7 +9,7 @@
                 "title": "Event Actions [Auditbeat Auditd] ECS",
                 "uiStateJSON": "{}",
                 "version": 1,
-                "visState": "{\"aggs\": [], \"params\": {\"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"time_field\": \"@timestamp\", \"index_pattern\": \"auditbeat-*\", \"background_color_rules\": [{\"id\": \"58c95a20-c1bd-11e7-938f-ab0645b6c431\"}], \"filter\": \"event.module:auditd\", \"bar_color_rules\": [{\"id\": \"5bfc71a0-c1bd-11e7-938f-ab0645b6c431\"}], \"type\": \"timeseries\", \"gauge_width\": 10, \"legend_position\": \"left\", \"show_legend\": 1, \"gauge_inner_width\": 10, \"series\": [{\"metrics\": [{\"id\": \"6b9fb2d0-c1bc-11e7-938f-ab0645b6c431\", \"type\": \"count\"}], \"chart_type\": \"line\", \"color\": \"#68BC00\", \"line_width\": 1, \"formatter\": \"number\", \"axis_position\": \"right\", \"split_mode\": \"terms\", \"stacked\": \"none\", \"fill\": 0.5, \"seperate_axis\": 0, \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"point_size\": 1, \"terms_field\": \"event.action\", \"label\": \"Actions\"}], \"axis_position\": \"left\", \"gauge_style\": \"half\", \"show_grid\": 1, \"axis_formatter\": \"number\", \"gauge_color_rules\": [{\"id\": \"5d20a650-c1bd-11e7-938f-ab0645b6c431\"}], \"interval\": \"auto\"}, \"type\": \"metrics\", \"title\": \"Event Actions [Auditbeat Auditd] ECS\"}"
+                "visState": "{\"params\": {\"series\": [{\"color\": \"#68BC00\", \"formatter\": \"number\", \"label\": \"Actions\", \"chart_type\": \"line\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"point_size\": 1, \"seperate_axis\": 0, \"axis_position\": \"right\", \"terms_field\": \"event.action\", \"metrics\": [{\"type\": \"count\", \"id\": \"6b9fb2d0-c1bc-11e7-938f-ab0645b6c431\"}], \"split_mode\": \"terms\", \"stacked\": \"none\", \"line_width\": 1, \"fill\": 0.5}], \"axis_formatter\": \"number\", \"time_field\": \"@timestamp\", \"type\": \"timeseries\", \"index_pattern\": \"auditbeat-*\", \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"show_grid\": 1, \"background_color_rules\": [{\"id\": \"58c95a20-c1bd-11e7-938f-ab0645b6c431\"}], \"gauge_inner_width\": 10, \"interval\": \"auto\", \"legend_position\": \"left\", \"gauge_width\": 10, \"gauge_color_rules\": [{\"id\": \"5d20a650-c1bd-11e7-938f-ab0645b6c431\"}], \"filter\": \"event.module:auditd\", \"bar_color_rules\": [{\"id\": \"5bfc71a0-c1bd-11e7-938f-ab0645b6c431\"}], \"show_legend\": 1, \"axis_position\": \"left\", \"gauge_style\": \"half\"}, \"title\": \"Event Actions [Auditbeat Auditd] ECS\", \"type\": \"metrics\", \"aggs\": []}"
             },
             "id": "97680df0-c1c0-11e7-8995-936807a28b16-ecs",
             "type": "visualization",
@@ -20,13 +20,13 @@
             "attributes": {
                 "description": "",
                 "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"index\": \"auditbeat-*\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": []}"
+                    "searchSourceJSON": "{\"filter\": [], \"index\": \"auditbeat-*\", \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
                 },
                 "savedSearchId": "0f10c430-c1c3-11e7-8995-936807a28b16-ecs",
                 "title": "Event Categories [Auditbeat Auditd] ECS",
                 "uiStateJSON": "{}",
                 "version": 1,
-                "visState": "{\"aggs\": [{\"type\": \"count\", \"enabled\": true, \"params\": {}, \"schema\": \"metric\", \"id\": \"1\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"size\": 5, \"orderBy\": \"1\", \"order\": \"desc\", \"customLabel\": \"Category\", \"field\": \"event.category\"}, \"schema\": \"segment\", \"id\": \"2\"}, {\"type\": \"terms\", \"enabled\": true, \"params\": {\"size\": 20, \"orderBy\": \"1\", \"order\": \"desc\", \"customLabel\": \"Action\", \"field\": \"event.action\"}, \"schema\": \"segment\", \"id\": \"3\"}], \"params\": {\"addLegend\": true, \"legendPosition\": \"right\", \"addTooltip\": true, \"isDonut\": true, \"type\": \"pie\"}, \"type\": \"pie\", \"title\": \"Event Categories [Auditbeat Auditd] ECS\"}"
+                "visState": "{\"params\": {\"legendPosition\": \"right\", \"type\": \"pie\", \"addTooltip\": true, \"addLegend\": true, \"isDonut\": true}, \"title\": \"Event Categories [Auditbeat Auditd] ECS\", \"type\": \"pie\", \"aggs\": [{\"schema\": \"metric\", \"enabled\": true, \"type\": \"count\", \"id\": \"1\", \"params\": {}}, {\"schema\": \"segment\", \"enabled\": true, \"type\": \"terms\", \"id\": \"2\", \"params\": {\"field\": \"event.category\", \"orderBy\": \"1\", \"order\": \"desc\", \"size\": 5, \"customLabel\": \"Category\"}}, {\"schema\": \"segment\", \"enabled\": true, \"type\": \"terms\", \"id\": \"3\", \"params\": {\"field\": \"event.action\", \"orderBy\": \"1\", \"order\": \"desc\", \"size\": 20, \"customLabel\": \"Action\"}}]}"
             },
             "id": "08679220-c25a-11e7-8692-232bd1143e8a-ecs",
             "type": "visualization",
@@ -49,7 +49,7 @@
                 "description": "",
                 "hits": 0,
                 "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"highlightAll\": true, \"index\": \"auditbeat-*\", \"version\": true, \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"query\": {\"match\": {\"event.module\": {\"type\": \"phrase\", \"query\": \"auditd\"}}}, \"meta\": {\"key\": \"event.module\", \"negate\": false, \"alias\": null, \"value\": \"auditd\", \"index\": \"auditbeat-*\", \"params\": {\"type\": \"phrase\", \"query\": \"auditd\"}, \"disabled\": false, \"type\": \"phrase\"}}]}"
+                    "searchSourceJSON": "{\"highlightAll\": true, \"filter\": [{\"$state\": {\"store\": \"appState\"}, \"meta\": {\"disabled\": false, \"alias\": null, \"index\": \"auditbeat-*\", \"type\": \"phrase\", \"value\": \"auditd\", \"negate\": false, \"params\": {\"type\": \"phrase\", \"query\": \"auditd\"}, \"key\": \"event.module\"}, \"query\": {\"match\": {\"event.module\": {\"type\": \"phrase\", \"query\": \"auditd\"}}}}], \"index\": \"auditbeat-*\", \"query\": {\"query\": \"\", \"language\": \"kuery\"}, \"version\": true}"
                 },
                 "sort": [
                     "@timestamp",
@@ -68,10 +68,10 @@
                 "description": "Summary of Linux kernel audit events.",
                 "hits": 0,
                 "kibanaSavedObjectMeta": {
-                    "searchSourceJSON": "{\"highlightAll\": true, \"version\": true, \"query\": {\"language\": \"kuery\", \"query\": \"\"}, \"filter\": []}"
+                    "searchSourceJSON": "{\"highlightAll\": true, \"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}, \"version\": true}"
                 },
-                "optionsJSON": "{\"darkTheme\": false, \"useMargins\": false}",
-                "panelsJSON": "[{\"gridData\": {\"h\": 3, \"i\": \"1\", \"w\": 7, \"y\": 0, \"x\": 0}, \"id\": \"97680df0-c1c0-11e7-8995-936807a28b16-ecs\", \"version\": \"6.2.4\", \"type\": \"visualization\", \"panelIndex\": \"1\"}, {\"gridData\": {\"h\": 3, \"i\": \"4\", \"w\": 5, \"y\": 0, \"x\": 7}, \"id\": \"08679220-c25a-11e7-8692-232bd1143e8a-ecs\", \"version\": \"6.2.4\", \"type\": \"visualization\", \"panelIndex\": \"4\"}, {\"gridData\": {\"h\": 5, \"i\": \"5\", \"w\": 12, \"y\": 3, \"x\": 0}, \"id\": \"0f10c430-c1c3-11e7-8995-936807a28b16-ecs\", \"version\": \"6.2.4\", \"type\": \"search\", \"panelIndex\": \"5\"}]",
+                "optionsJSON": "{\"useMargins\": false, \"darkTheme\": false}",
+                "panelsJSON": "[{\"gridData\": {\"x\": 0, \"i\": \"1\", \"w\": 7, \"h\": 3, \"y\": 0}, \"panelIndex\": \"1\", \"type\": \"visualization\", \"version\": \"6.2.4\", \"id\": \"97680df0-c1c0-11e7-8995-936807a28b16-ecs\"}, {\"gridData\": {\"x\": 7, \"i\": \"4\", \"w\": 5, \"h\": 3, \"y\": 0}, \"panelIndex\": \"4\", \"type\": \"visualization\", \"version\": \"6.2.4\", \"id\": \"08679220-c25a-11e7-8692-232bd1143e8a-ecs\"}, {\"gridData\": {\"x\": 0, \"i\": \"5\", \"w\": 12, \"h\": 5, \"y\": 3}, \"panelIndex\": \"5\", \"type\": \"search\", \"version\": \"6.2.4\", \"id\": \"0f10c430-c1c3-11e7-8995-936807a28b16-ecs\"}]",
                 "timeRestore": false,
                 "title": "[Auditbeat Auditd] Overview ECS",
                 "version": 1
