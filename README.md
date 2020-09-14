@@ -62,7 +62,7 @@ This will install and run auditbeat.
 1) Enter the following script into the console using elevated privileges
 
 ```Linux
-curl https://olympus-io.github.io/vizion.ai/beat-install-scripts/install-config-auditbeat.sh > install-config-auditbeat.sh; chmod a+x  install-config-auditbeat.sh; ./install-config-auditbeat.sh _PLACEHOLDER_API_ENDPOINT_
+curl https://vizion-elk.github.io/elk//beat-install-scripts/install-config-auditbeat.sh > install-config-auditbeat.sh; chmod a+x  install-config-auditbeat.sh; ./install-config-auditbeat.sh _PLACEHOLDER_API_ENDPOINT_ _PLACEHOLDER_KIBANA_URL_
 ```
 
 2) When prompted, select the proper environment to complete the installation.
