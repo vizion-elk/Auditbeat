@@ -8,7 +8,7 @@ $principal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.
 if($principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     "`nYou are running Powershell with full privilege`n"
     
-    #Change Folder to filebeat
+    #Change Folder to auditbeat
     $currentLocation = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
 
     If ( -Not (Test-Path -Path "$currentLocation\auditbeat") )
